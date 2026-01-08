@@ -132,6 +132,20 @@ st.markdown("""
     h1, h2, h3, h4, h5, h6, p, span, div, button, input, select {
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
     }
+    /* Sidebar toggle button styling */
+    [data-testid="stSidebarCollapseButton"] {
+        background-color: #0066CC !important;
+        color: white !important;
+        border: 2px solid #003366 !important;
+        border-radius: 6px !important;
+        padding: 8px 12px !important;
+        font-weight: bold !important;
+        box-shadow: 0 2px 6px rgba(0, 51, 102, 0.2) !important;
+    }
+    [data-testid="stSidebarCollapseButton"]:hover {
+        background-color: #003366 !important;
+        box-shadow: 0 3px 8px rgba(0, 51, 102, 0.3) !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -140,18 +154,37 @@ years = list(range(2019, 2026))
 levels = ['Associate', 'Manager & Up']
 generations = ['Baby Boomer', 'Gen X', 'Millennial', 'Gen Z']
 
-# Sidebar configuration
-st.sidebar.title("📊 Dashboard Controls")
-st.sidebar.markdown("---")
-st.sidebar.markdown("**Filter Data by Year**")
-selected_years = st.sidebar.multiselect(
-    "Select Years to Display:",
-    years,
-    default=years,
-    help="Choose one or more years to analyze workforce trends"
-)
-st.sidebar.markdown("---")
-st.sidebar.caption("💡 Tip: Select multiple years to compare trends across time periods")
+# Initialize sidebar state
+if 'sidebar_expanded' not in st.session_state:
+    st.session_state.sidebar_expanded = True
+
+# Custom sidebar toggle button in main area
+col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+with col1:
+    if st.button(
+        "◀" if st.session_state.sidebar_expanded else "▶",
+        key="sidebar_toggle",
+        help="Collapse/Expand sidebar"
+    ):
+        st.session_state.sidebar_expanded = not st.session_state.sidebar_expanded
+        st.rerun()
+
+# Sidebar configuration (only shown when expanded)
+if st.session_state.sidebar_expanded:
+    st.sidebar.title("📊 Dashboard Controls")
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("**Filter Data by Year**")
+    selected_years = st.sidebar.multiselect(
+        "Select Years to Display:",
+        years,
+        default=years,
+        help="Choose one or more years to analyze workforce trends"
+    )
+    st.sidebar.markdown("---")
+    st.sidebar.caption("💡 Tip: Select multiple years to compare trends across time periods")
+else:
+    # When sidebar is collapsed, still get the years but don't show the sidebar UI
+    selected_years = years
 
 # Filter logic
 def filter_years(df):

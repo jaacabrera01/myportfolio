@@ -1,0 +1,4 @@
+Model,architecture,dropout,learning_rate,batch_size,epochs,window_size,log_target,split,callbacks
+MLP_DNN,"Dense[256,128,64]",0.15,0.0003,64,200,N/A,log1p,chronological,EarlyStopping(30)+ReduceLROnPlateau
+CNN_DNN,"Conv1D[64,64]+Dense[128,64]",0.2,0.0003,64,200,N/A,log1p,chronological,EarlyStopping(30)+ReduceLROnPlateau
+LSTM_DNN,"LSTM[128,64]+Dense[64]",0.3,0.0003,32,200,8,log1p,chronological,EarlyStopping(30)+ReduceLROnPlateau

@@ -1,0 +1,29 @@
+Model,Hyperparameters,Tuned
+LinearRegression,"copy_X=True, fit_intercept=True, n_jobs=None",No
+Ridge,alpha=10,Yes
+Lasso,alpha=10,Yes
+ElasticNet,"alpha=10, l1_ratio=0.5",Yes
+BayesianRidge,alpha=default,No
+HuberRegressor,"alpha=0.0001, epsilon=1.35, fit_intercept=True",No
+TheilSenRegressor,"copy_X=deprecated, fit_intercept=True, max_iter=300",No
+RANSACRegressor,"estimator=None, is_data_valid=None, is_model_valid=None",No
+PassiveAggressiveRegressor,"C=1.0, average=False, early_stopping=False",No
+OrthogonalMatchingPursuit,"fit_intercept=True, n_nonzero_coefs=None, precompute=auto",No
+Lars,"copy_X=True, eps=2.220446049250313e-16, fit_intercept=True",No
+LassoLars,alpha=1.0,No
+SGDRegressor,"max_iter=1000, tol=0.001",No
+KernelRidge,alpha=1.0,No
+DecisionTreeRegressor,max_depth=10,No
+RandomForestRegressor,"n_estimators=200, max_depth=15, min_samples_split=2",Yes
+ExtraTreesRegressor,"n_estimators=200, max_depth=15, min_samples_split=2",Yes
+GradientBoostingRegressor,"n_estimators=200, learning_rate=0.1, max_depth=5",Yes
+AdaBoostRegressor,"estimator=None, learning_rate=1.0, loss=linear",No
+KNeighborsRegressor,n_neighbors=5,No
+SVR,"kernel=rbf, C=100, gamma=scale",Yes
+GaussianProcessRegressor,"alpha=1e-10, copy_X_train=True, kernel=None",No
+XGBRegressor,"n_estimators=300, learning_rate=0.05, max_depth=7",Yes
+LGBMRegressor,"n_estimators=300, learning_rate=0.05, num_leaves=50",Yes
+CatBoostRegressor,"iterations=300, learning_rate=0.05, depth=8",Yes
+MLP_DNN,"layers=[256,128,64,32], dropout=[0.3,0.3,0.2], batch_norm=True, optimizer=Adam(lr=0.001), epochs=100",Yes
+LSTM_DNN,"layers=[LSTM(128),LSTM(64),Dense(32)], dropout=[0.3,0.2], optimizer=Adam(lr=0.001), epochs=100",Yes
+CNN_DNN,"layers=[Conv1D(64)×2,MaxPool(2),Conv1D(32),Dense(64)], dropout=[0.3,0.2], batch_norm=True, epochs=100",Yes

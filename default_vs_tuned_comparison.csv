@@ -1,0 +1,10 @@
+Model,Default_R2,Default_Settings,Tuned_R2,Tuned_Settings,Improvement
+Ridge,0.72,alpha=1.0,0.8,alpha=10,+0.08
+Lasso,0.71,alpha=1.0,0.78,alpha=10,+0.07
+ElasticNet,0.69,"alpha=1.0, l1_ratio=0.5",0.78,"alpha=10, l1_ratio=0.5",+0.09
+RandomForest,0.82,n_estimators=100,0.94,n_estimators=200,+0.12
+GradientBoosting,0.79,"n_estimators=100, lr=0.1",0.94,"n_estimators=300, lr=0.05",+0.15
+XGBoost,0.81,"n_estimators=100, lr=0.3",0.95,"n_estimators=300, lr=0.05",+0.14
+LightGBM,0.8,"n_estimators=100, lr=0.1",0.93,"n_estimators=300, lr=0.05",+0.13
+CatBoost,0.82,"iterations=100, lr=0.03",0.94,"iterations=300, lr=0.05",+0.12
+MLP_DNN,0.78,"layers=[128,64], no_dropout",0.88,"layers=[256,128,64,32], dropout=[0.3,0.3,0.2]",+0.10

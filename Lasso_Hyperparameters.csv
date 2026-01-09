@@ -1,0 +1,7 @@
+Hyperparameter,Value,Tuned,Description
+alpha,1000.0,Yes (GridSearchCV),Regularization strength (L1 penalty)
+max_iter,10000,No (fixed),Maximum iterations for solver
+fit_intercept,True,No (default),Calculate intercept term
+cv_folds,5,N/A,Number of cross-validation folds
+cv_r2_score,0.13846224806915733,N/A,Best R² score from cross-validation
+features_selected,8,N/A,Number of features with non-zero coefficients

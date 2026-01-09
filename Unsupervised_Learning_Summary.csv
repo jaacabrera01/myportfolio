@@ -1,0 +1,14 @@
+Method,Category,Key Metric
+K-Means,Clustering,Silhouette: 0.2116
+Hierarchical (Agglomerative),Clustering,Silhouette: 0.0836
+DBSCAN,Clustering,Silhouette: 0.1613
+Gaussian Mixture Model,Clustering,Silhouette: 0.1373
+OPTICS,Clustering,Silhouette: 0.0273
+Spectral Clustering,Clustering,Silhouette: -0.0044
+PCA,Dimensionality Reduction,Variance: 43.62%
+t-SNE,Dimensionality Reduction,Non-linear embedding
+UMAP,Dimensionality Reduction,Non-linear embedding
+Factor Analysis,Dimensionality Reduction,Log-likelihood: -26.22
+Truncated SVD,Dimensionality Reduction,Variance: 43.62%
+Isolation Forest,Anomaly Detection,Anomalies: 322 (5.00%)
+Local Outlier Factor,Anomaly Detection,Anomalies: 322 (5.00%)

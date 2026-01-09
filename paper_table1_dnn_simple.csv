@@ -1,0 +1,4 @@
+Model,Architecture,Dropout,Optimizer,Parameters
+MLP_DNN,Dense(128) → Dense(64) → Dense(32) → Output(1),0.3,Adam (lr=0.001),~11K
+LSTM_DNN,LSTM(64) → Dense(32) → Output(1),0.2 (LSTM + recurrent),Adam (lr=0.001),~19K
+CNN_DNN,Conv1D(64)×2 → MaxPool → Conv1D(32) → Dense(64) → Output(1),"0.3 (Conv), 0.2 (Dense)",Adam (lr=0.001),~14K

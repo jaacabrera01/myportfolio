@@ -1,0 +1,17 @@
+Model,Tuning_Method,Parameters_Tuned,Improvement
+LinearRegression,None (Default),N/A,Baseline
+Ridge,Manual Grid,alpha,+0.08 R²
+Lasso,Manual Grid,alpha,+0.07 R²
+ElasticNet,Manual Grid,"alpha, l1_ratio",+0.09 R²
+RandomForestRegressor,Manual,"n_estimators, max_depth",+0.12 R²
+ExtraTreesRegressor,Manual,"n_estimators, max_depth",+0.10 R²
+GradientBoostingRegressor,Manual Grid,"n_estimators, learning_rate, max_depth",+0.15 R²
+XGBRegressor,Manual Grid,"n_estimators, learning_rate, max_depth",+0.14 R²
+LGBMRegressor,Manual Grid,"n_estimators, learning_rate, num_leaves",+0.13 R²
+CatBoostRegressor,Manual Grid,"iterations, learning_rate, depth",+0.12 R²
+SVR,Manual Grid,"kernel, C, gamma",+0.05 R²
+KNeighborsRegressor,None (Default),N/A,Minimal
+DecisionTreeRegressor,None (Default),N/A,Minimal
+MLP_DNN,Architecture Search + Early Stopping,"layers, dropout, learning_rate",+0.10 R²
+LSTM_DNN,Architecture Search + Early Stopping,"layers, dropout, learning_rate",+0.09 R²
+CNN_DNN,Architecture Search + Early Stopping,"filters, kernel_size, learning_rate",+0.08 R²

@@ -1,0 +1,9 @@
+[2025-11-07 16:46:47] Pipeline started
+[2025-11-07 16:46:47] STEP 1: Starting EDA Analysis
+[2025-11-07 16:46:48] ❌ EDA failed: No module named 'tabulate'
+[2025-11-07 16:46:48] STEP 2: Starting Regression Benchmark
+[2025-11-07 16:47:35] ✅ Regression benchmark completed successfully
+[2025-11-07 16:47:35] STEP 3: Starting Classification Benchmark
+[2025-11-07 16:49:33] ✅ Classification benchmark completed successfully
+[2025-11-07 16:49:33] Generating final summary report
+[2025-11-07 16:49:33] ⚠️  Pipeline completed with errors (2/3 stages succeeded)

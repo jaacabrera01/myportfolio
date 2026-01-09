@@ -1,0 +1,8 @@
+Hyperparameter,Value,Tuned,Description
+n_estimators,200.0,Yes (GridSearchCV),Number of trees in the forest
+max_depth,20.0,Yes (GridSearchCV),Maximum depth of each tree
+min_samples_split,2.0,Yes (GridSearchCV),Minimum samples required to split a node
+min_samples_leaf,1.0,Yes (GridSearchCV),Minimum samples required in a leaf node
+random_state,42.0,No (fixed),Random seed for reproducibility
+cv_folds,5.0,N/A,Number of cross-validation folds
+cv_r2_score,0.9181541266534079,N/A,Best R² score from cross-validation

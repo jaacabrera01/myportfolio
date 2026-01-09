@@ -1,0 +1,7 @@
+Hyperparameter,Value,Tuned,Description
+max_depth,20.0,Yes (GridSearchCV),Maximum depth of the tree
+min_samples_split,10.0,Yes (GridSearchCV),Minimum samples required to split a node
+min_samples_leaf,1.0,Yes (GridSearchCV),Minimum samples required in a leaf node
+random_state,42.0,No (fixed),Random seed for reproducibility
+cv_folds,5.0,N/A,Number of cross-validation folds
+cv_r2_score,0.8895663130792407,N/A,Best R² score from cross-validation

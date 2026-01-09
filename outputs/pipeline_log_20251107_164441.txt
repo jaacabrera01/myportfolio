@@ -1,0 +1,3 @@
+[2025-11-07 16:44:41] Pipeline started
+[2025-11-07 16:44:41] STEP 1: Starting EDA Analysis
+[2025-11-07 16:44:41] ❌ EDA failed: File `'01_EDA_Analysis.ipynb'` not found.

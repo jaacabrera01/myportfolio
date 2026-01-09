@@ -1,0 +1,7 @@
+Hyperparameter,Value,Tuned,Description
+kernel,rbf,Fixed,Kernel function
+C,100,Yes (GridSearchCV),Regularization strength (larger C = lower regularization)
+epsilon,0.01,Yes (GridSearchCV),Epsilon tube width (insensitive zone)
+gamma,auto,Yes (GridSearchCV),RBF kernel width (auto/scale)
+cv_folds,5,N/A,Number of cross-validation folds
+cv_r2_score,-0.03863549011728358,N/A,Best R² score from cross-validation

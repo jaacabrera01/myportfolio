@@ -1,0 +1,9 @@
+Hyperparameter,Value,Tuned,Description
+n_estimators,500.0,Yes (GridSearchCV),Number of boosting trees
+max_depth,3.0,Yes (GridSearchCV),Maximum depth of each tree
+learning_rate,0.1,Yes (GridSearchCV),Step size shrinkage (learning rate)
+subsample,0.8,Yes (GridSearchCV),Row subsampling ratio
+colsample_bytree,1.0,Yes (GridSearchCV),Column subsampling per tree
+random_state,42.0,No (fixed),Random seed for reproducibility
+cv_folds,5.0,N/A,Number of cross-validation folds
+cv_r2_score,0.9516150117119835,N/A,Best R² score from cross-validation

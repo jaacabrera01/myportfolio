@@ -17,13 +17,24 @@ st.markdown("""
     * {
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
     }
+    body, .stApp, [data-testid="stAppViewContainer"] {
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
+    }
+    .main {
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
+    }
+    h1, h2, h3, h4, h5, h6, p, span, div {
+        color: #FFFFFF !important;
+    }
     .main-header {
         font-size: 2.5rem;
         font-weight: 700;
         color: #FFFFFF;
         margin-bottom: 0.5rem;
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
-        background: linear-gradient(90deg, #003366 0%, #0066CC 100%);
+        background-color: #004080;
         padding: 20px;
         border-radius: 8px;
         text-align: center;
@@ -36,91 +47,105 @@ st.markdown("""
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
     }
     .metric-card {
-        background-color: #FFFFFF;
+        background-color: #1a1a1a;
         padding: 20px;
         border-radius: 8px;
-        border: 1px solid #E0E0E0;
+        border: 1px solid #333333;
         border-left: 4px solid #0066CC;
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        color: #FFFFFF;
     }
     /* Dashboard card styling */
     .dashboard-card {
-        background-color: #FFFFFF;
-        border: 1px solid #E0E0E0;
+        background-color: #1a1a1a;
+        border: 1px solid #333333;
         border-radius: 10px;
         padding: 20px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 20px;
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
+        color: #FFFFFF;
     }
     /* Chart container styling */
     [data-testid="stPlotlyChart"] {
-        background-color: #FFFFFF;
-        border: 1px solid #E0E0E0;
+        background-color: #1a1a1a;
+        border: 1px solid #333333;
         border-radius: 8px;
         padding: 15px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
     /* Dataframe styling */
     [data-testid="dataFrame"] {
-        background-color: #FFFFFF;
-        border: 1px solid #E0E0E0;
+        background-color: #1a1a1a;
+        border: 1px solid #333333;
         border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
     /* Info/Alert boxes */
     [data-testid="stAlert"] {
-        background-color: #F5F5F5;
+        background-color: #1a1a1a;
         border: 1px solid #0066CC;
         border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        color: #FFFFFF;
     }
     /* Section header styling */
     h3 {
-        background: linear-gradient(90deg, #003366 0%, #0066CC 100%);
-        color: white;
-        padding: 12px 20px;
-        border-radius: 6px;
-        margin-top: 20px;
-        margin-bottom: 15px;
-        font-weight: 700;
+        background-color: #004080 !important;
+        color: white !important;
+        padding: 12px 20px !important;
+        border-radius: 6px !important;
+        margin-top: 0px !important;
+        margin-bottom: 15px !important;
+        font-weight: 700 !important;
     }
     /* Metric container */
     [data-testid="stMetricDelta"] {
-        color: #0066CC;
+        color: #0066CC !important;
+    }
+    [data-testid="stMetricDelta"] * {
+        color: #0066CC !important;
+    }
+    /* Override inline styles for metric delta */
+    [data-testid="stMetric"] [data-testid="stMetricDelta"] {
+        color: #0066CC !important;
+    }
+    [data-testid="stMetric"] [data-testid="stMetricDelta"] > * {
+        color: #0066CC !important;
     }
     /* Style multiselect dropdown */
     div[data-baseweb="select"] {
-        background-color: #ffffff !important;
+        background-color: #1a1a1a !important;
         border-color: #0066CC !important;
         border-radius: 6px !important;
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
         box-shadow: 0 1px 3px rgba(0, 51, 102, 0.1) !important;
     }
     div[data-baseweb="select"] > div {
-        background-color: #ffffff !important;
+        background-color: #1a1a1a !important;
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
+        color: #FFFFFF !important;
     }
     div[data-baseweb="select"] > div:hover {
-        background-color: #E8F4FF !important;
+        background-color: #333333 !important;
     }
     /* Style dropdown options */
     [data-baseweb="popover"] {
-        background-color: #ffffff !important;
+        background-color: #1a1a1a !important;
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
     }
     [data-baseweb="menu"] {
-        background-color: #ffffff !important;
+        background-color: #1a1a1a !important;
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
     }
     [data-baseweb="menu"] li {
-        color: #003366 !important;
+        color: #FFFFFF !important;
         font-family: 'Helvetica', 'Helvetica Neue', Arial, sans-serif !important;
     }
     [data-baseweb="menu"] li:hover {
-        background-color: #D6EAF8 !important;
-        color: #003366 !important;
+        background-color: #333333 !important;
+        color: #FFFFFF !important;
     }
     /* Style selected items */
     [data-baseweb="tag"] {
@@ -146,6 +171,76 @@ st.markdown("""
         background-color: #003366 !important;
         box-shadow: 0 3px 8px rgba(0, 51, 102, 0.3) !important;
     }
+    /* Sidebar styling */
+    [data-testid="stSidebar"] {
+        background-color: #000000 !important;
+    }
+    [data-testid="stSidebar"] * {
+        color: #FFFFFF !important;
+        background-color: #000000 !important;
+    }
+    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3, [data-testid="stSidebar"] p {
+        color: #FFFFFF !important;
+    }
+    /* Metrics styling */
+    [data-testid="stMetric"] {
+        background-color: transparent !important;
+        color: #FFFFFF !important;
+    }
+    [data-testid="stMetricLabel"] {
+        background-color: transparent !important;
+        color: #FFFFFF !important;
+    }
+    [data-testid="stMetricValue"] {
+        background-color: transparent !important;
+        color: #FFFFFF !important;
+    }
+    /* Custom metric boxes */
+    .metric-box {
+        border: 2px solid #0066CC;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        background-color: transparent;
+        color: #FFFFFF;
+    }
+    .metric-box-value {
+        font-size: 32px;
+        font-weight: bold;
+        color: #0066CC;
+        margin-bottom: 8px;
+    }
+    .metric-box-label {
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    /* Override delta text color specifically */
+    [data-testid="stMetric"] [data-testid="stMetricDelta"] {
+        color: #0066CC !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+    [data-testid="stMetric"] [data-testid="stMetricDelta"] * {
+        color: #0066CC !important;
+        background-color: transparent !important;
+    }
+    /* Column styling */
+    [data-testid="stColumn"] {
+        background-color: #000000 !important;
+    }
+    /* All containers */
+    [data-testid="stContainer"] {
+        background-color: #000000 !important;
+    }
+    /* Expander styling */
+    [data-testid="stExpander"] {
+        background-color: #1a1a1a !important;
+    }
+    [data-testid="stExpander"] * {
+        color: #FFFFFF !important;
+    }
+
     </style>
 """, unsafe_allow_html=True)
 
@@ -158,36 +253,65 @@ generations = ['Baby Boomer', 'Gen X', 'Millennial', 'Gen Z']
 if 'sidebar_expanded' not in st.session_state:
     st.session_state.sidebar_expanded = True
 
-# Custom sidebar toggle button in main area
-col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
-with col1:
-    if st.button(
-        "◀" if st.session_state.sidebar_expanded else "▶",
-        key="sidebar_toggle",
-        help="Collapse/Expand sidebar"
-    ):
-        st.session_state.sidebar_expanded = not st.session_state.sidebar_expanded
-        st.rerun()
+# Sidebar configuration
+st.sidebar.title("📊 Dashboard Controls")
+st.sidebar.markdown("---")
+st.sidebar.markdown("**Filter Data by Year**")
 
-# Sidebar configuration (only shown when expanded)
-if st.session_state.sidebar_expanded:
-    st.sidebar.title("📊 Dashboard Controls")
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("**Filter Data by Year**")
-    selected_years = st.sidebar.multiselect(
-        "Select Years to Display:",
-        years,
-        default=years,
-        help="Choose one or more years to analyze workforce trends"
-    )
-    st.sidebar.markdown("---")
-    st.sidebar.caption("💡 Tip: Select multiple years to compare trends across time periods")
-else:
-    # When sidebar is collapsed, still get the years but don't show the sidebar UI
-    selected_years = years
+# Initialize selected years in session state
+if 'selected_years_set' not in st.session_state:
+    st.session_state.selected_years_set = set(years)  # Start with all years selected
+    st.session_state.last_clicked_year = None  # Track the last clicked year
+
+# Add CSS for button styling
+st.markdown("""
+    <style>
+    .year-selected {
+        background-color: #FF6B6B !important;
+        color: white !important;
+        border: 2px solid #FF6B6B !important;
+        font-weight: bold !important;
+    }
+    .year-unselected {
+        background-color: #0066CC !important;
+        color: white !important;
+        border: 2px solid #0066CC !important;
+    }
+    .year-unselected:hover {
+        background-color: #003366 !important;
+        border-color: #003366 !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Create buttons for year selection
+cols = st.sidebar.columns(3)
+for idx, year in enumerate(years):
+    col = cols[idx % 3]
+    with col:
+        is_selected = year in st.session_state.selected_years_set
+        # Use HTML/CSS to style based on selection state
+        button_class = "year-selected" if is_selected else "year-unselected"
+        
+        # Create a custom button with dynamic styling
+        if st.button(str(year), use_container_width=True, key=f"year_{year}"):
+            st.session_state.last_clicked_year = year  # Store the clicked year
+            if year in st.session_state.selected_years_set:
+                st.session_state.selected_years_set.discard(year)
+            else:
+                st.session_state.selected_years_set.add(year)
+            st.rerun()
+
+selected_years = sorted(list(st.session_state.selected_years_set))
+last_clicked_year = st.session_state.last_clicked_year if st.session_state.last_clicked_year else (max(selected_years) if selected_years else 2025)
+
+st.sidebar.markdown("---")
+st.sidebar.caption("💡 Tip: Click years to toggle selection")
 
 # Filter logic
 def filter_years(df):
+    if not selected_years:
+        return df
     return df[df['Year'].isin(selected_years)]
 
 # Headcount data
@@ -202,60 +326,70 @@ st.markdown('<div class="main-header">👥 ACJ Company</div>', unsafe_allow_html
 
 # Get the aggregated metrics for selected years
 if selected_years:
-    latest_year = max(selected_years)
-    year_data = headcount_data[headcount_data['Year'] == latest_year]
+    display_year = last_clicked_year
+    # Get all data for selected years
+    filtered_data = headcount_data[headcount_data['Year'].isin(selected_years)]
+    year_data = filtered_data[filtered_data['Year'] == display_year]
     total_hc = year_data['Count'].sum()
     managers_up = year_data[year_data['Level'] == 'Manager & Up']['Count'].sum()
     associates = year_data[year_data['Level'] == 'Associate']['Count'].sum()
+    avg_tenure = 3.25
+    retention_rate = 0 if display_year == 2019 else 88 + display_year % 6
 else:
-    latest_year = 2025
-    total_hc, managers_up, associates = 920, 184, 736
+    display_year = 2025
+    total_hc = 1118 + 282
+    managers_up = 282
+    associates = 1118
+    avg_tenure = 3.25
+    retention_rate = 91
 
 # Key Metrics Section
 st.markdown("### 📈 Key Metrics")
+st.markdown("")
 col1, col2, col3, col4, col5 = st.columns(5, gap="medium")
 
 with col1:
-    st.metric(
-        label="Total Headcount",
-        value=f"{total_hc:,}",
-        delta=f"as of {latest_year}",
-        help="Total employee count"
-    )
+    st.markdown(f"""
+    <div class="metric-box">
+        <div class="metric-box-value">{total_hc:,}</div>
+        <div class="metric-box-label">Total Headcount</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col2:
-    st.metric(
-        label="Managers & Up",
-        value=f"{managers_up:,}",
-        delta=f"{(managers_up/total_hc*100):.1f}% of workforce" if total_hc > 0 else "0%",
-        help="Management and above positions"
-    )
+    st.markdown(f"""
+    <div class="metric-box">
+        <div class="metric-box-value">{managers_up:,}</div>
+        <div class="metric-box-label">Managers & Up</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col3:
-    st.metric(
-        label="Associates",
-        value=f"{associates:,}",
-        delta=f"{(associates/total_hc*100):.1f}% of workforce" if total_hc > 0 else "0%",
-        help="Individual contributor level"
-    )
+    st.markdown(f"""
+    <div class="metric-box">
+        <div class="metric-box-value">{associates:,}</div>
+        <div class="metric-box-label">Associates</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col4:
-    st.metric(
-        label="Avg Tenure",
-        value="3.25 yrs",
-        delta="Stable",
-        help="Average years of service"
-    )
+    st.markdown(f"""
+    <div class="metric-box">
+        <div class="metric-box-value">3.25 yrs</div>
+        <div class="metric-box-label">Avg Tenure</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col5:
-    st.metric(
-        label="Retention Rate",
-        value="91%",
-        delta="+2% YoY",
-        help="Employee retention rate"
-    )
+    st.markdown(f"""
+    <div class="metric-box">
+        <div class="metric-box-value">{retention_rate}%</div>
+        <div class="metric-box-label">Retention Rate</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-st.markdown("---")
+st.markdown("")
+st.markdown("")
 
 # Charts Section
 st.markdown("### 📊 Workforce Analysis")
@@ -265,41 +399,75 @@ col1, col2 = st.columns(2, gap="medium")
 
 with col1:
     st.markdown("#### Headcount Distribution by Level")
-    fig1 = px.bar(
-        filter_years(headcount_data),
-        x='Year',
-        y='Count',
-        color='Level',
-        barmode='group',
-        labels={'Count': 'Number of Employees', 'Year': 'Fiscal Year'},
-        color_discrete_map={'Associate': '#003366', 'Manager & Up': '#0066CC'}
-    )
-    fig1.update_layout(
-        height=400,
-        hovermode='x unified',
-        showlegend=True,
-        template='plotly_white'
-    )
-    st.plotly_chart(fig1, use_container_width=True)
+    if total_hc == 0:
+        pass
+    else:
+        # Filter data for the display year only
+        display_year_data = headcount_data[headcount_data['Year'] == display_year]
+        fig1 = px.bar(
+            display_year_data,
+            x='Year',
+            y='Count',
+            color='Level',
+            barmode='group',
+            labels={'Count': 'Number of Employees', 'Year': 'Fiscal Year'},
+            color_discrete_map={'Associate': '#003366', 'Manager & Up': '#0066CC'}
+        )
+        fig1.update_layout(
+            height=400,
+            hovermode='x unified',
+            showlegend=True,
+            template='plotly_white'
+        )
+        st.plotly_chart(fig1, use_container_width=True)
 
 with col2:
     st.markdown("#### Service Years Distribution")
-    service_years = pd.DataFrame({
-        'Tenure': [i for i in range(1, 11) for _ in range(100)],
-        'Count': [1000 - i*50 for i in range(1, 11) for _ in range(100)]
-    })
-    fig2 = px.histogram(
+    # Tenure distribution data
+    tenure_data_by_year = {
+        2019: {0: 215, 1: 215, 2: 164, 3: 156, 4: 170, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0},
+        2020: {0: 50, 1: 197, 2: 193, 3: 149, 4: 153, 5: 148, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0},
+        2021: {0: 120, 1: 45, 2: 182, 3: 173, 4: 154, 5: 141, 6: 141, 7: 0, 8: 0, 9: 0, 10: 0},
+        2022: {0: 230, 1: 119, 2: 44, 3: 175, 4: 159, 5: 127, 6: 122, 7: 124, 8: 0, 9: 0, 10: 0},
+        2023: {0: 180, 1: 211, 2: 113, 3: 44, 4: 162, 5: 143, 6: 112, 7: 108, 8: 107, 9: 0, 10: 0},
+        2024: {0: 240, 1: 169, 2: 191, 3: 101, 4: 43, 5: 169, 6: 124, 7: 99, 8: 95, 9: 93, 10: 0},
+        2025: {0: 220, 1: 231, 2: 162, 3: 172, 4: 91, 5: 40, 6: 127, 7: 104, 8: 90, 9: 79, 10: 0}
+    }
+    
+    # Get data for display year
+    if display_year in tenure_data_by_year:
+        year_tenure = tenure_data_by_year[display_year]
+        service_years = pd.DataFrame({
+            'Years': list(year_tenure.keys()),
+            'Count': list(year_tenure.values())
+        })
+    else:
+        service_years = pd.DataFrame({
+            'Years': list(range(11)),
+            'Count': [0] * 11
+        })
+    
+    fig2 = px.bar(
         service_years,
-        x='Tenure',
+        x='Years',
         y='Count',
-        nbins=10,
-        labels={'Tenure': 'Years of Service', 'Count': 'Number of Employees'},
+        labels={'Years': 'Years of Service', 'Count': 'Number of Employees'},
         color_discrete_sequence=['#0066CC']
     )
     fig2.update_layout(
         height=400,
         hovermode='x unified',
-        template='plotly_white'
+        template='plotly_white',
+        xaxis=dict(
+            tickvals=[0, 5, 10],
+            ticktext=['0', '5', '10'],
+            range=[-0.5, 10.5]
+        ),
+        yaxis=dict(
+            tickvals=[0, 500, 1500],
+            ticktext=['0', '500', '1500'],
+            range=[0, 1500]
+        )
     )
     st.plotly_chart(fig2, use_container_width=True)
 

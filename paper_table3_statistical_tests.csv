@@ -1,0 +1,7 @@
+Comparison,Model_A,Model_B,p_value,Significant,Effect_Size,Interpretation
+Best DNN vs Best Gradient Boosting,[Best DNN],[Best GBM],TBD*,TBD,TBD,Pending prediction data
+Best DNN vs Best Random Forest,[Best DNN],[Best RF],TBD*,TBD,TBD,Pending prediction data
+Best DNN vs Best Linear Model,[Best DNN],[Best Linear],TBD*,TBD,TBD,Pending prediction data
+MLP vs LSTM,MLP_DNN,LSTM_DNN,TBD*,TBD,TBD,Pending prediction data
+MLP vs CNN,MLP_DNN,CNN_DNN,TBD*,TBD,TBD,Pending prediction data
+LSTM vs CNN,LSTM_DNN,CNN_DNN,TBD*,TBD,TBD,Pending prediction data

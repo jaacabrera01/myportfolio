@@ -1,0 +1,10 @@
+Hyperparameter,Value,Tuned,Description
+iterations,200.0,Yes (GridSearchCV),Number of boosting iterations (trees)
+depth,6.0,Yes (GridSearchCV),Maximum tree depth
+learning_rate,0.1,Yes (GridSearchCV),Step size shrinkage (learning rate)
+l2_leaf_reg,3.0,Yes (GridSearchCV),L2 regularization coefficient
+bagging_temperature,0.5,Yes (GridSearchCV),Bayesian bootstrap temperature for bagging
+random_strength,1.0,Yes (GridSearchCV),Random score penalty for splits
+random_state,42.0,No (fixed),Random seed for reproducibility
+cv_folds,5.0,N/A,Number of cross-validation folds
+cv_r2_score,0.922952740499621,N/A,Best R² score from cross-validation

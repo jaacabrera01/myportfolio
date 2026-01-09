@@ -1,0 +1,2 @@
+Hello, file I/O!
+Use UTF-8 for ₱ peso and other symbols.

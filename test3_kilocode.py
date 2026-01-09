@@ -93,7 +93,7 @@ st.markdown("""
     /* Section header styling */
     h3 {
         background-color: #004080 !important;
-        color: white !important;
+        color: black !important;
         padding: 12px 20px !important;
         border-radius: 6px !important;
         margin-top: 0px !important;
@@ -344,9 +344,7 @@ for idx, year in enumerate(years):
         # Create a custom button with dynamic styling
         if st.button(str(year), use_container_width=True, key=f"year_{year}"):
             st.session_state.last_clicked_year = year  # Store the clicked year
-            if year in st.session_state.selected_years_set:
-                st.session_state.selected_years_set.discard(year)
-            else:
+            if year not in st.session_state.selected_years_set:
                 st.session_state.selected_years_set.add(year)
             st.rerun()
 
@@ -394,21 +392,17 @@ if selected_years:
     associates = year_data[year_data['Level'] == 'Associate']['Count'].sum()
     avg_tenure = avg_tenure_by_year.get(display_year, 5.9)
     retention_rate = retention_by_year.get(display_year, 94)
-    if 2019 in selected_years:
-        tenure_display = f"{avg_tenure} yrs"
-        retention_display = f"{retention_rate}%"
-    else:
-        tenure_display = "--"
-        retention_display = "--"
+    tenure_display = f"{avg_tenure} yrs"
+    retention_display = f"{retention_rate}%"
 else:
     display_year = 2025
-    total_hc = 0
-    managers_up = 0
-    associates = 0
-    avg_tenure = 5.9
+    total_hc = 1400
+    managers_up = 282
+    associates = 1118
+    avg_tenure = 3.25
     retention_rate = 91
-    tenure_display = "--"
-    retention_display = "--"
+    tenure_display = "3.25 yrs"
+    retention_display = "91%"
 
 # Key Metrics Section
 st.markdown("### 📈 Key Metrics")
@@ -469,8 +463,11 @@ col1, col2 = st.columns(2, gap="medium")
 
 with col1:
     st.markdown("#### Headcount Distribution by Level")
-    # Always show all years for headcount distribution
-    display_year_data = headcount_data
+    # Filter headcount data by selected years
+    if selected_years:
+        display_year_data = headcount_data[headcount_data['Year'].isin(selected_years)]
+    else:
+        display_year_data = headcount_data
     fig1 = px.bar(
         display_year_data,
         x='Year',
@@ -485,7 +482,8 @@ with col1:
         hovermode='x unified',
         showlegend=True,
         template='plotly_white',
-        clickmode='event+select'
+        clickmode='event+select',
+        font=dict(color='black')
     )
     selected = st.plotly_chart(fig1, use_container_width=True, key='headcount_chart', on_select='rerun')
 
@@ -602,7 +600,7 @@ st.markdown("---")
 # Row 3: Demographics
 st.markdown("### 👥 Workforce Demographics")
 
-col1, col2, col3 = st.columns([1, 1, 1.2], gap="medium")
+col1, col2, col3 = st.columns([1, 1, 1.2])
 
 with col1:
     st.markdown("#### Gender Distribution")
@@ -622,7 +620,7 @@ with col1:
         hole=0.4,
         color_discrete_map={'Male': '#003366', 'Female': '#0066CC'}
     )
-    fig5.update_layout(height=350, showlegend=True, template='plotly_white')
+    fig5.update_layout(height=250, showlegend=True, template='plotly_white', paper_bgcolor='white', plot_bgcolor='white', font=dict(color='black'))
     st.plotly_chart(fig5, use_container_width=True)
 
 with col2:
@@ -643,7 +641,7 @@ with col2:
         hole=0.4,
         color_discrete_sequence=['#003366', '#0066CC', '#4A90E2', '#7FB3D5']
     )
-    fig6.update_layout(height=350, template='plotly_white')
+    fig6.update_layout(height=250, template='plotly_white', paper_bgcolor='white', plot_bgcolor='white', font=dict(color='black'))
     st.plotly_chart(fig6, use_container_width=True)
 
 with col3:
@@ -662,9 +660,12 @@ with col3:
         color_continuous_scale='Blues'
     )
     fig7.update_layout(
-        height=350,
+        height=250,
         showlegend=False,
         template='plotly_white',
+        paper_bgcolor='white',
+        plot_bgcolor='white',
+        font=dict(color='black'),
         xaxis=dict(range=[0, 5])
     )
     st.plotly_chart(fig7, use_container_width=True)

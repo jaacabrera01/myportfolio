@@ -1,4 +1,0 @@
-Model,Architecture,Activation,Dropout,Batch_Size,Optimizer,Epochs,Early_Stopping,Parameters
-MLP_DNN,Dense(128) → Dense(64) → Dense(32) → Output(1),"ReLU (hidden), Linear (output)",0.3,32,Adam (lr=0.001),50,Yes (patience=10),~11K
-LSTM_DNN,LSTM(64) → Dense(32) → Output(1),"Tanh (LSTM), ReLU (Dense), Linear (output)",0.2 (LSTM + recurrent),32,Adam (lr=0.001),50,Yes (patience=10),~19K
-CNN_DNN,Conv1D(64)×2 → MaxPool → Conv1D(32) → Dense(64) → Output(1),"ReLU (all hidden), Linear (output)","0.3 (Conv), 0.2 (Dense)",32,Adam (lr=0.001),50,Yes (patience=10),~14K

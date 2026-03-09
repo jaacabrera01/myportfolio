@@ -1,6 +1,0 @@
-Family,Best_Model,R²,RMSE,MAE,Training_Time_sec,Rank
-Gradient Boosting,XGBRegressor,0.9843,69999.74,46732.52,0.50,1
-Linear Models,LinearRegression,0.9838,71095.49,48589.73,0.00,2
-Random Forest,ExtraTreesRegressor,0.9792,80690.97,52872.88,0.09,12
-Support Vector,SVR,0.0037,557925.70,455721.05,0.03,24
-Deep Learning,LSTM_DNN,-3.6096,1200099.87,1062080.21,0.00,26

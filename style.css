@@ -154,6 +154,14 @@ main {
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
+/* === Make lists in cards match paragraph style === */
+.card ul, .card li {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-family: inherit;
+  margin-bottom: 0.5em;
+}
+
 .card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);

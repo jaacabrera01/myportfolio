@@ -18,6 +18,7 @@
       <a href="about.html">About Me</a>
       <a href="projects.html" class="active">Projects</a>
       <a href="certifications.html">Certifications</a>
+      <a href="achievements.html">Achievements</a>
       <a href="contacts.html">Contact</a>
     </div>
   </nav>
@@ -49,6 +50,8 @@
     <div class="card project-card">
       <h3>HR Analytics Dashboard <span class="tag" style="vertical-align: middle;">Academic Project</span></h3>
       <p>An HR Analytics Dashboard developed as part of my master's program in Data Visualization. This project showcases the application of analytical and visual design techniques to present key workforce insights in an intuitive and data-driven format.</p>
+      <a href="https://mban626hrdashboard.streamlit.app" target="_blank">Open HR Dashboard</a><br>
+      <a href="https://github.com/jaacabrera01/mban626_jac" target="_blank">View on GitHub</a>
       <div class="cert-image" style="margin: 1rem 0;">
         <img src="images/HR.jpeg" alt="HR Analytics Dashboard Screenshot">
       </div>
@@ -59,10 +62,37 @@
         <span class="tag">Master's Program</span>
       </div>
     </div>
+    <div class="card project-card">
+    <h3>Prompt Engineering for Automated QA <span class="tag" style="vertical-align: middle;">Personal Project</span></h3>
+    <p>Developed a Python script using OpenAI's API to automate the generation of negative test cases for a login form and their corresponding expected error messages using prompt chaining.</p>
+    <div>
+    <span class="tag">Prompt Engineering</span>
+    <span class="tag">OpenAI API</span>
+    <span class="tag">Python</span>
+    <span class="tag">QA Automation</span>
+    </div>
+    <a href="https://github.com/jaacabrera01/generativeai" target="_blank">View on GitHub</a>
+    <pre style="background:#f4f4f4;padding:1em;overflow-x:auto;font-size:0.95em;"><code>import openai
+
+  def generate_negative_test_cases(prompt):
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=prompt,
+        max_tokens=150
+    )
+    return response.choices[0].text.strip()
+
+# Example usage
+prompt = "Generate negative test cases for a login form and expected error messages."
+print(generate_negative_test_cases(prompt))
+</code></pre>
+  <p>This approach streamlines the creation of comprehensive test cases, improving QA efficiency and coverage.</p>
+    
   </main>
 
+    
   <footer>
-    <p>&copy; 2026 Juliana Amparo Cabrera. All rights reserved.</p>
+    <p>&copy; 2026 All rights reserved.</p>
   </footer>
 </body>
 </html>

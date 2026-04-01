@@ -7,8 +7,8 @@
   --primary-light: #2d4263;
   --accent: #3a86ff;
   --accent-hover: #2667cc;
-  --text: #2e2e2e;
-  --text-light: #6b7280;
+  --text: #000000;
+  --text-light: #000000;
   --bg: #fafbfc;
   --white: #ffffff;
   --border: #e5e7eb;
@@ -175,7 +175,7 @@ main {
 }
 
 .card p {
-  color: var(--text-light);
+  color: var(--text);
   font-size: 0.95rem;
 }
 

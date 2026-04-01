@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>Juliana Amparo Cabrera</h1>
-    <p class="subtitle">Manual QA &bull; Analytics &bull; ISTQB Certified</p>
+    <p class="subtitle">Manual QA &bull; Analytics &bull; ISTQB Certified &bull; AI & Automation</p>
   </header>
 
   <nav>
@@ -87,6 +87,37 @@ prompt = "Generate negative test cases for a login form and expected error messa
 print(generate_negative_test_cases(prompt))
 </code></pre>
   <p>This approach streamlines the creation of comprehensive test cases, improving QA efficiency and coverage.</p>
+    </div>
+
+    <div class="card project-card">
+      <h3>OrangeHRM Autonomous QA Pipeline <span class="tag" style="vertical-align: middle;">Personal Project</span></h3>
+      <p>Built a comprehensive 7-stage AI-driven QA automation pipeline that converts Jira requirements into fully executed test suites. The pipeline integrates AI-powered test generation, BDD automation, and seamless Jira/Testmo reporting, enabling autonomous end-to-end testing with human-in-the-loop validation.</p>
+      <a href="https://github.com/jaacabrera01/ai-qa-automation-pipeline" target="_blank">View on GitHub</a>
+      <div class="cert-image" style="margin: 1rem 0;">
+        <img src="images/orangehrm_qa.png" alt="OrangeHRM QA Pipeline" style="max-width: 100%; height: auto;">
+      </div>
+      <div>
+        <span class="tag">AI-Powered Test Generation</span>
+        <span class="tag">BDD/Gherkin</span>
+        <span class="tag">Python</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Jira Integration</span>
+        <span class="tag">Selenium/Playwright</span>
+        <span class="tag">Page Object Model</span>
+        <span class="tag">DOM Scraping</span>
+      </div>
+      <p><strong>Pipeline Stages:</strong></p>
+      <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+        <li><strong>Stage 0:</strong> AI-generated Jira Epics & User Stories</li>
+        <li><strong>Stage 1:</strong> Read requirements from Jira</li>
+        <li><strong>Stage 2:</strong> Live website DOM scraping for element selectors</li>
+        <li><strong>Stage 3:</strong> AI-powered manual test case generation</li>
+        <li><strong>Stage 4:</strong> Generate BDD feature files & Page Objects</li>
+        <li><strong>Stage 5:</strong> Execute tests with auto-healing (5-retry mechanism)</li>
+        <li><strong>Stage 6:</strong> Post test results as Jira comments</li>
+      </ul>
+      <p><strong>Key Achievements:</strong> Reduced manual test case creation time by 80%, automated cross-tool integration, implemented intelligent test retry logic, and created reusable prompt engineering patterns for consistent test quality.</p>
+    </div>
     
   </main>
 

@@ -9,4 +9,4 @@ With 15+ years of experience in enterprise and mobile app testing, I specialize 
 - JIRA, Zephyr, Azure DevOps
 - Basic API Testing
 - Exposure to Selenium, Cucumber, Java
-- Upskilling in Generative AI Testing (ISTQB CT-GenAI)
+- Certified ISTQB CT-GenAI

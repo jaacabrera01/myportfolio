@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog by Juliana Amparo Cabrera. Thoughts on AI-augmented testing, ISTQB CT-GenAI, and 15+ years of lessons in enterprise QA engineering.">
+  <title>Blog | Juliana Amparo Cabrera | Senior QA Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>!function(){var t=localStorage.getItem('theme');t==='dark'&&document.documentElement.setAttribute('data-theme','dark')}();</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NT1S5BQEZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NT1S5BQEZW');
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Juliana Amparo Cabrera</h1>
+    <div class="subtitle">
+      <span class="sub-pill">Senior QA Engineer</span>
+      <span class="sub-pill">ISTQB CT-GenAI Certified</span>
+      <span class="sub-pill">15+ Years Enterprise QA</span>
+      <span class="sub-pill">Master of Business Analytics</span>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contacts.html">Contact</a>
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme"></button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="section-header">
+      <h2 class="section-title">Blog</h2>
+      <p class="section-subtitle">Thoughts on AI testing, QA strategy, and 15+ years of lessons in enterprise quality engineering.</p>
+    </div>
+
+    <!-- Post 1 -->
+    <div class="card blog-post" style="border-left: 4px solid var(--accent);">
+      <div class="blog-post-meta">
+        <span class="tag tag-accent">AI Testing</span>
+        <span class="tag tag-purple">Prompt Engineering</span>
+        <span class="blog-date">August 2026</span>
+        <span class="blog-read-time">&middot; 4 min read</span>
+      </div>
+      <h3>How I Cut Test Case Drafting Time by 80% with Prompt Chaining</h3>
+      <div class="blog-body">
+        <p>The first time I watched an LLM generate a full set of negative test cases in under 30 seconds, my first reaction wasn't excitement. It was suspicion. I'd been writing test cases manually for over a decade. I knew exactly what made a good negative test. The edge cases that live at the boundaries, the inputs that systems don't expect, the sequences that nobody thinks to try until production breaks. So when a language model spat out a clean-looking list that fast, I assumed it was shallow. I started reading. It wasn't.</p>
+
+        <p>What changed everything for me wasn't the AI itself. It was learning how to direct it properly. Prompt chaining is what made the real difference. Instead of asking "write test cases for the login screen," I broke the task into a deliberate sequence: first, analyze the acceptance criteria and surface every implicit assumption. Then enumerate the boundary conditions. Then generate negative scenarios for each one, including expected error messages. Each prompt builds on the output of the last, and the model maintains context across the chain. The results are dramatically more thorough than a single prompt can produce.</p>
+
+        <p>The 80% reduction came from measuring actual drafting time across a sprint, not just subjective feel. It wasn't only about speed, either. The model consistently surfaced boundary cases I would have caught eventually but might have deprioritized under deadline pressure. Multifield validation interactions. Null-byte injection edge cases. Expired-token retry flows. Things that are technically in the spec but easy to skip when you're staring at 40 stories and a two-week window.</p>
+
+        <p>What I still do manually is the review pass, the risk prioritization, and anything requiring context the requirements didn't capture. The unwritten business rules that live in the heads of product owners and support teams. That part hasn't changed, and I don't expect it to. AI is good at systematic coverage. It's not good at knowing that this particular insurance carrier has a quirk with multi-state policies that's never been documented.</p>
+
+        <p>If you're a QA engineer figuring out where to start with AI tooling, my honest advice: don't start with automation. Start with test case generation. The risk is lower, the improvement is immediately measurable, and it forces you to develop prompting discipline you'll need for everything else. Once you can reliably coax a model into producing high-quality test cases, the rest starts to click into place.</p>
+      </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="card blog-post" style="border-left: 4px solid var(--emerald);">
+      <div class="blog-post-meta">
+        <span class="tag tag-success">ISTQB</span>
+        <span class="tag tag-accent">Certification</span>
+        <span class="blog-date">July 2026</span>
+        <span class="blog-read-time">&middot; 4 min read</span>
+      </div>
+      <h3>Why ISTQB CT-GenAI Matters: What the Exam Taught Me About LLM Risks in QA</h3>
+      <div class="blog-body">
+        <p>I'll be honest. When I first heard about an ISTQB certification specifically for AI testing, I was skeptical. I'd already been using LLMs in my QA work for months and building actual pipelines with them. What was a certification going to teach me that hands-on experience hadn't? Quite a bit, as it turned out. Not because the syllabus was full of surprises, but because it forced me to stop treating what I knew intuitively as something I actually understood rigorously.</p>
+
+        <p>Non-determinism was the first thing that hit differently once I had a framework for it. When you run the same prompt twice, you don't always get the same test cases. Most of the time the variation is cosmetic, like reordered items or slightly different phrasing. But sometimes it isn't. For teams working in regulated industries like healthcare or insurance, where I've spent most of my career, that inconsistency creates a real traceability problem if you're not accounting for it. The exam gave me the vocabulary to explain that risk clearly to stakeholders who aren't engineers.</p>
+
+        <p>Hallucination risk in QA is subtler than people assume. A model generating test cases doesn't always "know" what the valid data ranges actually are. It makes plausible guesses based on training data. If you ask it to generate boundary tests for a healthcare copay calculation without anchoring it to the actual business rules, it will confidently produce test cases that test the wrong constraints. I've caught this firsthand. The review pass matters, and you need domain knowledge to do it properly. The certification helped me articulate why that review step isn't optional.</p>
+
+        <p>What I valued most was the structured vocabulary it gave me for conversations with engineering leads and product managers. When I can explain non-determinism, prompt injection risks, and data leakage concerns in plain business terms, not just as technical concepts, it changes how those conversations go. I've been in meetings where QA concerns about AI tooling got dismissed as overcautious. Having a recognized credential behind the same argument makes it land differently.</p>
+
+        <p>Is it worth doing? Yes, especially if you're positioning yourself for AI-QA hybrid roles. The exam is difficult enough to be meaningful, and the framework it gives you for evaluating AI testing tools, rather than just accepting them at face value, is genuinely useful in day-to-day work. I left better prepared to push back when something looked wrong, and that's really what the job is.</p>
+      </div>
+    </div>
+
+    <!-- Post 4 -->
+    <div class="card blog-post" style="border-left: 4px solid var(--purple);">
+      <div class="blog-post-meta">
+        <span class="tag tag-purple">Career</span>
+        <span class="tag tag-accent">AI Testing</span>
+        <span class="blog-date">June 2026</span>
+        <span class="blog-read-time">&middot; 3 min read</span>
+      </div>
+      <h3>From Manual Tester to AI-QA Engineer: What Actually Changed (and What Didn't)</h3>
+      <div class="blog-body">
+        <p>Fifteen years is a long time to do anything. Long enough to watch the job change around you while the core of it stays the same. I started as a manual tester at Navitaire, testing airline reservation systems. The work was methodical. You read a spec, you built a test plan, you executed cases, you filed bugs, you retested. There were no AI tools. There wasn't even much automation in most of the teams I worked on early. It was humans reading software behavior and deciding if it was right.</p>
+
+        <p>A lot of what I do now looks completely different on the surface. I write prompts. I read Python and parse JSON. I connect tools through REST APIs and think about DOM selectors and LLM temperature settings. I've built a 7-stage autonomous pipeline that runs from Jira ticket to executed test with minimal human input in between. If you'd shown 2010-me that workflow, she wouldn't have recognized it as QA work.</p>
+
+        <p>But here's what hasn't changed: the reason the job exists. Software breaks in ways that matter to real people. A patient's copay gets miscalculated, a flight booking fails at checkout, an insurance policy binds with the wrong premium. The job is understanding those systems well enough to find those failures before they reach users. That requires domain knowledge, critical thinking, and a stubborn insistence on asking "but what if this doesn't work?" No amount of automation generates that on its own.</p>
+
+        <p>What AI has done is clear away the mechanical layer that used to sit between me and the interesting problems. I spend less time writing boilerplate test cases, more time on exploratory testing and architecture. The job hasn't gotten easier. The bar has just moved. The expectation is that you can cover more ground faster, which means the judgment calls matter more, not less.</p>
+
+        <p>If you're early in your QA career and feeling anxious about AI, my honest take is this: lean into your domain expertise. Learn the industry you're testing deeply enough to catch what the model gets wrong. Understand the business rules, not just the test scripts. That's the part that's genuinely hard to automate, and it's the part that will keep you valuable regardless of what the tooling looks like five years from now. The tools will keep changing. The need for someone who actually understands the system won't.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Juliana Amparo Cabrera. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

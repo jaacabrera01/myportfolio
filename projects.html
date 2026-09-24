@@ -3,14 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Senior QA Engineer with 15+ years across SaaS, insurance, airline, and healthcare platforms. ISTQB CT-GenAI certified. Builds AI-augmented testing pipelines and leads distributed QA teams. Available for Senior QA, QA Lead, and AI-QA hybrid roles. Based in Manila, available remote (APAC/AU/NZ).">
- <title>Juliana Amparo Cabrera — Senior QA Engineer | AI-Augmented Testing | ISTQB CT-GenAI</title>
+  <meta name="description" content="Featured Quality Assurance and AI testing projects by Juliana Amparo Cabrera, including autonomous QA pipelines, prompt engineering, and HR analytics dashboards.">
+  <title>Projects — Juliana Amparo Cabrera | Senior QA Engineer</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>!function(){var t=localStorage.getItem('theme');t==='dark'&&document.documentElement.setAttribute('data-theme','dark')}();</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NT1S5BQEZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NT1S5BQEZW');
+  </script>
 </head>
 <body>
+
   <header>
     <h1>Juliana Amparo Cabrera</h1>
-    <p class="subtitle">Senior QA Engineer &bull; AI-Augmented Testing &bull; 15 Years in Enterprise QA &bull; ISTQB CT-GenAI Certified</p>
+    <div class="subtitle">
+      <span class="sub-pill">Senior QA Engineer</span>
+      <span class="sub-pill">ISTQB CT-GenAI Certified</span>
+      <span class="sub-pill">15+ Years Enterprise QA</span>
+      <span class="sub-pill">Master of Business Analytics</span>
+    </div>
   </header>
 
   <nav>
@@ -20,111 +36,271 @@
       <a href="projects.html" class="active">Projects</a>
       <a href="certifications.html">Certifications</a>
       <a href="achievements.html">Achievements</a>
+      <a href="blog.html">Blog</a>
       <a href="contacts.html">Contact</a>
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme"></button>
     </div>
   </nav>
 
   <main>
-    <h2 class="section-title">Projects</h2>
-
-    <div class="card project-card">
-      <h3>Regression Test Suite</h3>
-      <p>Designed and maintained a comprehensive BDD test suite using Gherkin syntax for SaaS platform workflows. Improved coverage by identifying critical paths and edge cases, reducing post-release defects.</p>
-      <div>
-        <span class="tag">BDD</span>
-        <span class="tag">Gherkin</span>
-        <span class="tag">SaaS</span>
-        <span class="tag">Regression</span>
-      </div>
+    <div class="section-header">
+      <h2 class="section-title">Featured Projects &amp; Frameworks</h2>
+      <p class="section-subtitle">Real-world implementations of AI-augmented test engineering, enterprise test architecture, and analytics.</p>
     </div>
 
-    <div class="card project-card">
-      <h3>UAT Validation Framework</h3>
-      <p>Owned last-mile testing and production validation for enterprise systems. Developed structured validation checklists and sign-off processes that ensured zero critical defects in production releases.</p>
-      <div>
-        <span class="tag">UAT</span>
-        <span class="tag">Enterprise</span>
-        <span class="tag">Validation</span>
+    <!-- FLAGSHIP PROJECT: OrangeHRM Autonomous QA Pipeline -->
+    <div class="card project-card" style="border-left-color: var(--accent); border-left-width: 5px;">
+      <div class="project-card-header">
+        <div>
+          <span class="tag tag-accent">Flagship AI Engineering</span>
+          <span class="tag tag-success">Production Ready</span>
+          <h3 style="font-size: 1.4rem; margin-top: 0.5rem;">OrangeHRM Autonomous AI QA Pipeline</h3>
+        </div>
+        <div class="project-actions" style="margin: 0;">
+          <a href="https://github.com/jaacabrera01/ai-qa-automation-pipeline" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            View on GitHub
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="card project-card">
-      <h3>HR Analytics Dashboard <span class="tag" style="vertical-align: middle;">Academic Project</span></h3>
-      <p>An HR Analytics Dashboard developed as part of my master's program in Data Visualization. This project showcases the application of analytical and visual design techniques to present key workforce insights in an intuitive and data-driven format.</p>
-      <a href="https://mban626hrdashboard.streamlit.app" target="_blank">Open HR Dashboard</a><br>
-      <a href="https://github.com/jaacabrera01/mban626_jac" target="_blank">View on GitHub</a>
-      <div class="cert-image" style="margin: 1rem 0;">
-        <img src="images/HR.jpeg" alt="HR Analytics Dashboard Screenshot">
+      <p>An autonomous <strong>7-stage AI-driven QA pipeline</strong> that ingests Jira requirements, inspects live DOM state, dynamically generates BDD test suites and Page Object Models, and executes tests with intelligent self-healing logic. Enables complete autonomy with human-in-the-loop review.</p>
+
+      <div style="margin: 1.5rem 0; text-align: center;">
+        <img src="images/orangehrm_qa.png" alt="OrangeHRM QA Pipeline Workflow Architecture" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
       </div>
-      <div>
-        <span class="tag">Data Visualization</span>
-        <span class="tag">HR Analytics</span>
-        <span class="tag">Dashboard</span>
-        <span class="tag">Master's Program</span>
+
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--primary); margin: 1.5rem 0 0.75rem;">7-Stage Autonomous Architecture:</h4>
+      <div class="pipeline-stepper">
+        <div class="step-card">
+          <div class="step-number">Stage 0</div>
+          <div class="step-title">Epic &amp; Story Synthesis</div>
+          <div class="step-desc">AI generates structured Jira Epics and User Stories with acceptance criteria.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Stage 1</div>
+          <div class="step-title">Requirements Ingestion</div>
+          <div class="step-desc">Reads and parses issue details directly from Jira REST APIs.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Stage 2</div>
+          <div class="step-title">Live DOM Scraping</div>
+          <div class="step-desc">Scrapes target application DOM in real time for resilient element selectors.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Stage 3</div>
+          <div class="step-title">AI Test Case Generation</div>
+          <div class="step-desc">Prompts LLM to produce negative, edge, and boundary manual test cases.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Stage 4</div>
+          <div class="step-title">BDD &amp; Page Object Model</div>
+          <div class="step-desc">Synthesizes executable Gherkin feature files and modular Python POM scripts.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Stage 5</div>
+          <div class="step-title">Self-Healing Execution</div>
+          <div class="step-desc">Executes tests with an intelligent 5-retry self-healing mechanism.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">Stage 6</div>
+          <div class="step-title">Jira / Testmo Reporting</div>
+          <div class="step-desc">Posts execution logs, screenshots, and pass/fail verdicts back to Jira.</div>
+        </div>
       </div>
-    </div>
-    <div class="card project-card">
-    <h3>Prompt Engineering for Automated QA <span class="tag" style="vertical-align: middle;">Personal Project</span></h3>
-    <p>Developed a Python script using OpenAI's API to automate the generation of negative test cases for a login form and their corresponding expected error messages using prompt chaining.</p>
-    <div>
-    <span class="tag">Prompt Engineering</span>
-    <span class="tag">OpenAI API</span>
-    <span class="tag">Python</span>
-    <span class="tag">QA Automation</span>
-    </div>
-    <a href="https://github.com/jaacabrera01/generativeai" target="_blank">View on GitHub</a>
-    <pre style="background:#f4f4f4;padding:1em;overflow-x:auto;font-size:0.95em;"><code>import openai
 
-  def generate_negative_test_cases(prompt):
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=prompt,
-        max_tokens=150
-    )
-    return response.choices[0].text.strip()
-
-# Example usage
-prompt = "Generate negative test cases for a login form and expected error messages."
-print(generate_negative_test_cases(prompt))
-</code></pre>
-  <p>This approach streamlines the creation of comprehensive test cases, improving QA efficiency and coverage.</p>
-    </div>
-
-    <div class="card project-card">
-      <h3>OrangeHRM Autonomous QA Pipeline <span class="tag" style="vertical-align: middle;">Personal Project</span></h3>
-      <p>Built a comprehensive 7-stage AI-driven QA automation pipeline that converts Jira requirements into fully executed test suites. The pipeline integrates AI-powered test generation, BDD automation, and seamless Jira/Testmo reporting, enabling autonomous end-to-end testing with human-in-the-loop validation.</p>
-      <a href="https://github.com/jaacabrera01/ai-qa-automation-pipeline" target="_blank">View on GitHub</a>
-      <div class="cert-image" style="margin: 1rem 0;">
-        <img src="images/orangehrm_qa.png" alt="OrangeHRM QA Pipeline" style="max-width: 100%; height: auto;">
+      <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.1rem; margin-top: 1.25rem;">
+        <strong style="color: var(--primary);">Key Engineering Impact:</strong>
+        <ul style="margin: 0.5rem 0 0 1.25rem;">
+          <li><strong>80% reduction</strong> in manual test case drafting and boilerplate test script authoring time.</li>
+          <li>Resilient element detection prevents brittle locator breakages through live DOM analysis.</li>
+          <li>Full traceability maintained from Jira user story down to test step execution.</li>
+        </ul>
       </div>
-      <div>
-        <span class="tag">AI-Powered Test Generation</span>
-        <span class="tag">BDD/Gherkin</span>
-        <span class="tag">Python</span>
+
+      <div style="margin-top: 1.25rem;">
+        <span class="tag tag-accent">AI-Powered Testing</span>
+        <span class="tag tag-accent">BDD / Gherkin</span>
         <span class="tag">OpenAI API</span>
-        <span class="tag">Jira Integration</span>
-        <span class="tag">Selenium/Playwright</span>
+        <span class="tag">Python</span>
+        <span class="tag">Selenium / Playwright</span>
         <span class="tag">Page Object Model</span>
-        <span class="tag">DOM Scraping</span>
+        <span class="tag">Jira REST API</span>
       </div>
-      <p><strong>Pipeline Stages:</strong></p>
-      <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
-        <li><strong>Stage 0:</strong> AI-generated Jira Epics & User Stories</li>
-        <li><strong>Stage 1:</strong> Read requirements from Jira</li>
-        <li><strong>Stage 2:</strong> Live website DOM scraping for element selectors</li>
-        <li><strong>Stage 3:</strong> AI-powered manual test case generation</li>
-        <li><strong>Stage 4:</strong> Generate BDD feature files & Page Objects</li>
-        <li><strong>Stage 5:</strong> Execute tests with auto-healing (5-retry mechanism)</li>
-        <li><strong>Stage 6:</strong> Post test results as Jira comments</li>
-      </ul>
-      <p><strong>Key Achievements:</strong> Reduced manual test case creation time by 80%, automated cross-tool integration, implemented intelligent test retry logic, and created reusable prompt engineering patterns for consistent test quality.</p>
     </div>
-    
+
+    <!-- PROJECT 2: Prompt Engineering for Automated QA -->
+    <div class="card project-card">
+      <div class="project-card-header">
+        <div>
+          <span class="tag tag-purple">Prompt Engineering</span>
+          <span class="tag">AI Research</span>
+          <h3 style="margin-top: 0.5rem;">Prompt Chaining for Negative Test Case Generation</h3>
+        </div>
+        <div class="project-actions" style="margin: 0;">
+          <a href="https://github.com/jaacabrera01/generativeai" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <p>A specialized Python implementation utilizing prompt chaining techniques with LLM APIs to systematically construct high-severity negative test scenarios, boundary validations, and precise expected error messages.</p>
+
+      <div class="code-window">
+        <div class="code-header">
+          <div class="code-dots">
+            <span class="code-dot dot-red"></span>
+            <span class="code-dot dot-yellow"></span>
+            <span class="code-dot dot-green"></span>
+          </div>
+          <span class="code-filename">generate_test_cases.py</span>
+          <span style="font-size: 0.72rem; color: #64748b;">Python</span>
+        </div>
+        <pre><code>import openai
+
+def generate_negative_test_cases(prompt: str) -> str:
+    """Systematically constructs negative validation scenarios via prompt chaining."""
+    response = openai.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are a Senior QA Test Architect. Formulate exhaustive negative test cases and expected error states."},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.2
+    )
+    return response.choices[0].message.content
+
+# Example Execution
+prompt = "Formulate negative test cases with boundary conditions for multi-factor login."
+print(generate_negative_test_cases(prompt))</code></pre>
+      </div>
+
+      <p>By enforcing low temperature and persona-primed prompt templates, this pattern produces deterministic, high-coverage boundary scenarios that standard manual test drafting frequently overlooks.</p>
+
+      <div style="margin-top: 1rem;">
+        <span class="tag tag-accent">Prompt Engineering</span>
+        <span class="tag">LLM APIs</span>
+        <span class="tag">Python</span>
+        <span class="tag">Negative Testing</span>
+        <span class="tag">Boundary Analysis</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: HR Analytics Dashboard -->
+    <div class="card project-card">
+      <div class="project-card-header">
+        <div>
+          <span class="tag tag-accent">Academic Research</span>
+          <span class="tag">Master of Business Analytics</span>
+          <h3 style="margin-top: 0.5rem;">Workforce Intelligence &amp; HR Analytics Dashboard</h3>
+        </div>
+        <div class="project-actions" style="margin: 0;">
+          <a href="https://mban626hrdashboard.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Live App Demo
+          </a>
+          <a href="https://github.com/jaacabrera01/mban626_jac" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <p>Developed as part of my graduate coursework at Map&uacute;a University, this interactive dashboard applies data storytelling and analytical design patterns to uncover workforce attrition trends, performance distributions, and organizational metrics.</p>
+
+      <div style="margin: 1.25rem 0; text-align: center;">
+        <img src="images/HR.jpeg" alt="HR Analytics Dashboard Screenshot" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+      </div>
+
+      <div style="margin-top: 1rem;">
+        <span class="tag tag-accent">Streamlit</span>
+        <span class="tag">Python</span>
+        <span class="tag">Data Visualization</span>
+        <span class="tag">Workforce Analytics</span>
+        <span class="tag">Master's Capstone</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 4: Event Data Collection & Survey PWA -->
+    <div class="card project-card">
+      <div class="project-card-header">
+        <div>
+          <span class="tag tag-accent">Academic Prototype</span>
+          <span class="tag">Full-Stack Web &amp; Mobile</span>
+          <h3 style="margin-top: 0.5rem;">Event Data Collection &amp; Reunion Survey App (PWA)</h3>
+        </div>
+        <div class="project-actions" style="margin: 0;">
+          <a href="https://github.com/jaacabrera01/tmabatch2002" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <p>A mobile-optimized, cross-platform Progressive Web Application (PWA) developed as an exploratory data collection prototype for graduate coursework. Built with React and Vite, the app features responsive survey workflows, Google Sign-In authentication, and an analytical <strong>Forecast Tab</strong> that tracks cumulative response trends, calibrates turnout estimates against historical benchmarks, and projects dynamic budget requirements.</p>
+
+      <div style="margin: 1.5rem 0; display: flex; flex-direction: column; align-items: center;">
+        <div style="max-width: 380px; width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm); background: #ffffff;">
+          <img src="images/reunion_forecast.png" alt="Reunion Survey App Forecast Tab Screenshot" style="width: 100%; height: auto; display: block;">
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.6rem; text-align: center; max-width: 480px;">
+          <strong>Forecast &amp; Analytics View:</strong> Real-time response trends, historical turnout blending (74% Yes rate adjusted for 2022 actuals), and cost-per-attendee budget calculations.
+        </p>
+      </div>
+
+      <div style="margin-top: 1rem;">
+        <span class="tag tag-accent">React</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Progressive Web App (PWA)</span>
+        <span class="tag">Predictive Modeling</span>
+        <span class="tag">Budget Forecasting</span>
+        <span class="tag">Google Sign-In</span>
+        <span class="tag">Mobile-First UI</span>
+        <span class="tag">LocalStorage / Firebase</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 5: Enterprise Regression Architecture -->
+    <div class="card project-card">
+      <div class="project-card-header">
+        <div>
+          <span class="tag">Enterprise Architecture</span>
+          <h3 style="margin-top: 0.5rem;">Multi-Tenant Regression &amp; BDD Test Architecture</h3>
+        </div>
+      </div>
+      <p>Designed and maintained a scalable BDD regression test suite using Gherkin syntax for complex multi-tenant SaaS and insurance distribution platforms. Formulated risk-based priority matrices across policy lifecycles (submission, quoting, binding, billing) to ensure thorough coverage of high-risk workflows and protect production release stability.</p>
+      <div style="margin-top: 1rem;">
+        <span class="tag">BDD / Gherkin</span>
+        <span class="tag">Multi-Tenant SaaS</span>
+        <span class="tag">P&amp;C Insurance</span>
+        <span class="tag">Regression Suite</span>
+        <span class="tag">Risk-Based Strategy</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 6: Enterprise UAT Governance -->
+    <div class="card project-card">
+      <div class="project-card-header">
+        <div>
+          <span class="tag">Release Governance</span>
+          <h3 style="margin-top: 0.5rem;">Mission-Critical UAT &amp; Production Sign-Off Framework</h3>
+        </div>
+      </div>
+      <p>Led end-to-end user acceptance testing governance across 40+ sprints for enterprise healthcare copay systems and airline payment processing. Established formal sign-off gates, audit trails, and multi-currency payment validation protocols that safeguarded core transaction revenues.</p>
+      <div style="margin-top: 1rem;">
+        <span class="tag">UAT Sign-Off</span>
+        <span class="tag">Payment Systems</span>
+        <span class="tag">Healthcare Compliance</span>
+        <span class="tag">Audit Traceability</span>
+      </div>
+    </div>
+
   </main>
 
-    
   <footer>
-    <p>&copy; 2026 All rights reserved.</p>
+    <p>&copy; 2026 Juliana Amparo Cabrera. All rights reserved.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
